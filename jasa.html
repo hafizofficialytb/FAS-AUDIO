@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fiz Audio — Profesional Sound System</title>
+    <meta
+      name="description"
+      content="Fiz Audio menyediakan layanan sound system, rental, instalasi, desain suara. Pesan sekarang via WhatsApp."
+    />
+    <link rel="stylesheet" href="jasa.css" />
+    <link
+      rel="shortcut icon"
+      href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html"
+          ><img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
+            alt="Fiz Audio Logo"
+        /></a>
+      </div>
+      <div class="navbar-menu">
+        <a href="jasa.html">Jasa</a>
+        <a href="#sewa">Sewa Sound System</a>
+        <a href="#event">Event &amp; Panggung</a>
+        <a href="gallry.html">Gallery</a>
+        <a href="price-list.html">Price List</a>
+        <a href="kontak.html">Kontak</a>
+
+        <button class="logout" id="btn-logout">Logout</button>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero-content container">
+        <h1>Suara Berkualitas, Pengalaman Maksimal</h1>
+        <p>
+          Solusi audio profesional untuk event, konser, dan kebutuhan sound
+          system Anda
+        </p>
+        <a
+          href="https://wa.me/6285176834002?text=Hallo%20Fiz%20Audio,%20saya%20ingin%20pesan%20layanan."
+          target="_blank"
+          class="btn-primary"
+          >Pesan Sekarang</a
+        >
+      </div>
+    </header>
+
+    <section class="features container">
+      <div class="feature-box">
+        <h3>Live Event & Sound System</h3>
+        <p>Sistem PA & speaker profesional untuk acara outdoor & indoor.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Desain Suara & Efek</h3>
+        <p>SFX, ambient, riser, transisi suara yang disesuaikan.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Peralatan Terbaru</h3>
+        <p>
+          Kami menggunakan teknologi audio terkini untuk menghasilkan suara
+          jernih dan bertenaga.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>Tim Profesional</h3>
+        <p>
+          Teknisi berpengalaman siap membantu setup dan pengoperasian sound
+          system Anda.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>Harga Kompetitif</h3>
+        <p>
+          Paket layanan dengan harga terbaik tanpa mengorbankan kualitas suara.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          © <span id="year"></span> FIZ AUDIO SOUND SYSTEM. Semua hak cipta
+          dilindungi oleh (FAS).
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      // Smooth scroll bila ada anchor link
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      //   logout
+      document.addEventListener("DOMContentLoaded", () => {
+        const username = localStorage.getItem("fiz_currentUser");
+        if (!username) {
+          // jika belum login, kembali ke index.html
+          window.location.href = "index.html";
+          return;
+        }
+        document.getElementById("user-name").textContent = username;
+      });
+
+      document.getElementById("btn-logout").addEventListener("click", () => {
+        localStorage.removeItem("fiz_currentUser");
+        // bisa juga remove user data jika mau
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
