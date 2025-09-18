@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daftar Harga Paket Waktu | Fiz Audio Sounds System</title>
+    <meta
+      name="description"
+      content="Lihat paket berdasarkan waktu (Siang, Malam, Siang & Malam) di Fiz Audio. Pilih paket dan hubungi admin via WhatsApp."/>
+      <link rel="stylesheet" href="price-list.css">
+  </head>
+  <body>
+
+<nav class="navbar">
+      <div class="navbar-logo">
+        <a href="home.html"
+          ><img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
+            alt="Fiz Audio Logo"
+        /></a>
+      </div>
+      <div class="navbar-menu">
+        <a href="jasa.html">Jasa</a>
+        <a href="sewa-sounds-system.html">Sewa Sound System</a>
+        <a href="gallry.html">Gallery</a>
+        <a href="price-list.html">Price List</a>
+        <a href="kontak.html">Kontak</a>
+
+        <button class="logout" id="btn-logout">Logout</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Daftar Harga Paket Berdasarkan Waktu</h1>
+      <p class="subtitle">
+        Pilih paket Siang, Malam, atau Siang & Malam sesuai kebutuhan Anda, lalu
+        hubungi admin via WhatsApp.
+      </p>
+
+      <div class="packages">
+        <!-- Paket Siang Acara Ulang Tahun -->
+        <div class="package-card">
+          <h3>Paket Siang</h3>
+          <h4>Acara Ulang Tahun</h4>
+          <p class="price">Rp 200.000</p>
+          <ul>
+            <li>Speaker 12 & 15inch"</li>
+            <li>Mixer Digital</li>
+            <li>2 Mikrofon Kabel</li>
+            <li>Durasi dari jam (13:00-16:00)</li>
+          </ul>
+          <div>
+            <a href="#" class="btn-pilih" data-waktu="Siang"
+              >Pilih Paket Siang</a
+            >
+          </div>
+        </div>
+        <!-- Paket Siang & Malam Acara Ulang Tahun-->
+        <div class="package-card">
+          <h3>Paket Siang & Malam</h3>
+          <h4>Acara Ulang Tahun</h4>
+          <p class="price">Rp 550.000</p>
+          <ul>
+            <li>Speaker 12 & 15inch"</li>
+            <li>Mixer Digital</li>
+            <li>2 Mikrofon Kabel</li>
+            <li>Durasi dari jam (08:00-22:00)</li>
+          </ul>
+          <div>
+            <a href="#" class="btn-pilih" data-waktu="Siang & Malam"
+              >Pilih Paket Siang & Malam</a
+            >
+          </div>
+        </div>
+        <!-- Paket Siang Acara Hajatan Sederhana-->
+        <div class="package-card">
+          <h3>Paket Siang</h3>
+          <h4>Acara Hajatan Sederhana</h4>
+          <p class="price">Rp 1.000.000</p>
+          <ul>
+            <li>Speaker 12 & 15inch"</li>
+            <li>Mixer Digital</li>
+            <li>2 Mikrofon Kabel</li>
+            <li>Durasi dari jam (08:00-16:00)</li>
+          </ul>
+          <div>
+            <a href="#" class="btn-pilih" data-waktu="Siang"
+              >Pilih Paket Siang</a
+            >
+          </div>
+        </div>
+        <!-- Paket Siang & Malam Acara Hajatan Sederhana-->
+        <div class="package-card">
+          <h3>Paket Siang & Malam</h3>
+          <h4>Acara Hajatan Sederhana</h4>
+          <p class="price">Rp 5.500.000</p>
+          <ul>
+            <li>Perlengkapan lengkap (Speaker, Lighting dasar)</li>
+            <li>Mixer Analog + DSP + Engineer</li>
+            <li>Teknisi & Operator penuh</li>
+            <li>Durasi full hari</li>
+          </ul>
+          <div>
+            <a href="#" class="btn-pilih" data-waktu="Siang & Malam"
+              >Pilih Siang & Malam</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-admin">
+        <h2>Pilih Admin untuk Menghubungi</h2>
+        <p>Silakan pilih admin via WhatsApp untuk pesan paket Anda:</p>
+        <ul class="admin-list">
+          <li>
+            <a href="#" class="admin-btn" data-admin="1"
+              >Admin 1: 085794781881</a
+            >
+          </li>
+          <li>
+            <a href="#" class="admin-btn" data-admin="2"
+              >Admin 2: 085794301088</a
+            >
+          </li>
+          <li>
+            <a href="#" class="admin-btn" data-admin="3"
+              >Admin 3: 085176834002</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <footer>
+        <p>
+          © <span id="year"></span> FIZ AUDIO SOUND SYSTEM. Semua hak cipta
+          dilindungi oleh (FAS).
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Format nomor admin dalam format internasional untuk wa.me
+      const admins = {
+        1: "6285794781881",
+        2: "6285794301088",
+        3: "6285176834002",
+      };
+
+      let selectedAdmin = null;
+      let selectedWaktu = null;
+
+      // tombol paket
+      document.querySelectorAll(".btn-pilih").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          selectedWaktu = btn.getAttribute("data-waktu");
+          // jika belum pilih admin, beri peringatan
+          if (!selectedAdmin) {
+            alert("Silakan pilih Admin terlebih dahulu.");
+            return;
+          }
+          const nomor = admins[selectedAdmin];
+          const pesan = `Hallo Admin ${selectedAdmin} Fiz Audio, saya ingin pesan paket *${encodeURIComponent(
+            selectedWaktu
+          )}*.`;
+          const waLink = `https://wa.me/${nomor}?text=${pesan}`;
+          window.open(waLink, "_blank");
+        });
+      });
+
+      // tombol pilih admin
+      document.querySelectorAll(".admin-btn").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const adm = btn.getAttribute("data-admin");
+          selectedAdmin = adm;
+          // visual feedback
+          document.querySelectorAll(".admin-btn").forEach((b) => {
+            b.style.background = "#007BFF";
+            b.style.color = "white";
+          });
+          btn.style.background = "#0056b3";
+          btn.style.color = "#fff";
+        });
+      });
+
+      // set tahun di footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      //   logout
+      document.addEventListener('DOMContentLoaded', () => {
+      const username = localStorage.getItem('fiz_currentUser');
+      if (!username) {
+        // jika belum login, kembali ke index.html
+        window.location.href = 'index.html';
+        return;
+      }
+      document.getElementById('user-name').textContent = username;
+    });
+
+    document.getElementById('btn-logout').addEventListener('click', () => {
+      localStorage.removeItem('fiz_currentUser');
+      // bisa juga remove user data jika mau
+      window.location.href = 'index.html';
+    });
+    </script>
+  </body>
+</html>
