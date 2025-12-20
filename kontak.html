@@ -1,118 +1,118 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kontak Fiz Audio</title>
-  <link rel="stylesheet" href="kontak.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontak Fiz Audio</title>
+    <link rel="stylesheet" href="kontak.css">
 </head>
+
 <body>
 
     <nav class="navbar">
-      <div class="navbar-logo">
-        <a href="home.html"
-          ><img
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
-            alt="Fiz Audio Logo"
-        /></a>
-      </div>
-      <div class="navbar-menu">
-        <a href="jasa.html">Jasa</a>
-        <a href="sewa-sounds-system.html">Sewa Sound System</a>
-        <a href="gallry.html">Gallery</a>
-        <a href="price-list.html">Price List</a>
-        <a href="kontak.html">Kontak</a>
+        <div class="navbar-logo">
+            <a href="home.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
+                    alt="Fiz Audio Logo" /></a>
+        </div>
+        <div class="navbar-menu">
+            <a href="jasa.html">Jasa</a>
+            <a href="sewa-sounds-system.html">Sewa Sound System</a>
+            <a href="gallry.html">Gallery</a>
+            <!-- <a href="price-list.html">Price List</a> -->
+            <a href="kontak.html">Kontak</a>
 
-        <button class="logout" id="btn-logout">Logout</button>
-      </div>
+            <button class="logout" id="btn-logout">Logout</button>
+        </div>
     </nav>
 
-<div class="container">
-  <h2>Hubungi Kami</h2>
-  <div class="error" id="error-msg"></div>
-  <form id="contact-form">
-    <div class="form-group">
-      <label for="name">Nama</label>
-      <input type="text" id="name" placeholder="Nama Anda" required>
+    <div class="container">
+        <h2>Hubungi Kami</h2>
+        <div class="error" id="error-msg"></div>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" placeholder="Nama Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">WhatsApp / Telepon</label>
+                <input type="tel" id="phone" placeholder="Nomor WhatsApp atau Telepon" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" placeholder="Apa yang ingin Anda sampaikan..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Kirim Pesan via WhatsApp</button>
+        </form>
     </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" placeholder="Email Anda" required>
-    </div>
-    <div class="form-group">
-      <label for="phone">WhatsApp / Telepon</label>
-      <input type="tel" id="phone" placeholder="Nomor WhatsApp atau Telepon" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Pesan</label>
-      <textarea id="message" placeholder="Apa yang ingin Anda sampaikan..." required></textarea>
-    </div>
-    <button type="submit" class="btn-submit">Kirim Pesan via WhatsApp</button>
-  </form>
-</div>
 
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const errorMsg = document.getElementById('error-msg');
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const errorMsg = document.getElementById('error-msg');
 
-    // Validasi
-    if (!name || !email || !phone || !message) {
-      errorMsg.textContent = 'Semua kolom wajib diisi';
-      errorMsg.style.display = 'block';
-      return;
-    }
-    // Optional: validasi email sederhana
-    if (!validateEmail(email)) {
-      errorMsg.textContent = 'Format email tidak valid';
-      errorMsg.style.display = 'block';
-      return;
-    }
-    // Siapkan pesan untuk WhatsApp
-    const adminNumber = '6285176834002'; // format internasional tanpa "0" depan: 085176834002 → 6285176834002
-    let whatsappText = `Halo Fiz Audio,\nSaya ingin menghubungi Anda lewat form kontak.\n\n`;
-    whatsappText += `Nama: ${name}\n`;
-    whatsappText += `Email: ${email}\n`;
-    whatsappText += `Nomor WA: ${phone}\n`;
-    whatsappText += `Pesan: ${message}\n`;
+            // Validasi
+            if (!name || !email || !phone || !message) {
+                errorMsg.textContent = 'Semua kolom wajib diisi';
+                errorMsg.style.display = 'block';
+                return;
+            }
+            // Optional: validasi email sederhana
+            if (!validateEmail(email)) {
+                errorMsg.textContent = 'Format email tidak valid';
+                errorMsg.style.display = 'block';
+                return;
+            }
+            // Siapkan pesan untuk WhatsApp
+            const adminNumber = '6285176834002'; // format internasional tanpa "0" depan: 085176834002 → 6285176834002
+            let whatsappText = `Halo Fiz Audio,\nSaya ingin menghubungi Anda lewat form kontak.\n\n`;
+            whatsappText += `Nama: ${name}\n`;
+            whatsappText += `Email: ${email}\n`;
+            whatsappText += `Nomor WA: ${phone}\n`;
+            whatsappText += `Pesan: ${message}\n`;
 
-    const encoded = encodeURIComponent(whatsappText);
-    const url = `https://wa.me/${adminNumber}?text=${encoded}`;
-    // buka WhatsApp
-    window.open(url, '_blank');
+            const encoded = encodeURIComponent(whatsappText);
+            const url = `https://wa.me/${adminNumber}?text=${encoded}`;
+            // buka WhatsApp
+            window.open(url, '_blank');
 
-    // bersihkan form (opsional)
-    document.getElementById('contact-form').reset();
-    errorMsg.style.display = 'none';
-  });
+            // bersihkan form (opsional)
+            document.getElementById('contact-form').reset();
+            errorMsg.style.display = 'none';
+        });
 
-  function validateEmail(email) {
-    // regex sederhana
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
-
-   //   logout
-      document.addEventListener("DOMContentLoaded", () => {
-        const username = localStorage.getItem("fiz_currentUser");
-        if (!username) {
-          // jika belum login, kembali ke index.html
-          window.location.href = "index.html";
-          return;
+        function validateEmail(email) {
+            // regex sederhana
+            const re = /\S+@\S+\.\S+/;
+            return re.test(email);
         }
-        document.getElementById("user-name").textContent = username;
-      });
 
-      document.getElementById("btn-logout").addEventListener("click", () => {
-        localStorage.removeItem("fiz_currentUser");
-        // bisa juga remove user data jika mau
-        window.location.href = "index.html";
-      });
-</script>
+        //   logout
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = localStorage.getItem("fiz_currentUser");
+            if (!username) {
+                // jika belum login, kembali ke index.html
+                window.location.href = "index.html";
+                return;
+            }
+            document.getElementById("user-name").textContent = username;
+        });
+
+        document.getElementById("btn-logout").addEventListener("click", () => {
+            localStorage.removeItem("fiz_currentUser");
+            // bisa juga remove user data jika mau
+            window.location.href = "index.html";
+        });
+    </script>
 
 </body>
+
 </html>
