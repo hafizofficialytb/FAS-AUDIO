@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kontak Fiz Audio</title>
     <link rel="stylesheet" href="kontak.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -29,75 +30,36 @@
         </div>
     </nav>
 
-    <div class="container">
-        <h2>Hubungi Kami</h2>
-        <div class="error" id="error-msg"></div>
-        <form id="contact-form">
-            <div class="form-group">
-                <label for="name">Nama</label>
-                <input type="text" id="name" placeholder="Nama Anda" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Email Anda" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">WhatsApp / Telepon</label>
-                <input type="tel" id="phone" placeholder="Nomor WhatsApp atau Telepon" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Pesan</label>
-                <textarea id="message" placeholder="Apa yang ingin Anda sampaikan..." required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Kirim Pesan via WhatsApp</button>
-        </form>
+    <div class="background-dalam">
+        <h2>Konsultasi Dengan Ahlinya Lebih Dekat</h2>
+        <h5>Lokasi Anda diluar Kuningan?</h5>
+        <h5>Nggak masalah! Semua bisa diatur..</h5>
     </div>
 
+    <div class="kontak-container">
+        <!-- WhatsApp -->
+        <div class="whatsapp">
+            <i class="bi bi-whatsapp"></i>
+            <h3>Chat dengan spesialis</h3>
+            <button id="whatsapp-sekarang">Chat di WhatsApp Sekarang</button>
+        </div>
+
+
+        <!-- Office -->
+        <div class="office">
+            <i class="bi bi-buildings"></i>
+            <h4>Office</h4>
+            <p>Jl. Raya Cibingbin, Dusun Pahing, <br> Gg. Arjuna, Cibingbin, Kec. Cibingbin, <br> Kabupaten Kuningan, Jawa Barat 45587</p>
+        </div>
+
+    </div>
+
+
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const errorMsg = document.getElementById('error-msg');
-
-            // Validasi
-            if (!name || !email || !phone || !message) {
-                errorMsg.textContent = 'Semua kolom wajib diisi';
-                errorMsg.style.display = 'block';
-                return;
-            }
-            // Optional: validasi email sederhana
-            if (!validateEmail(email)) {
-                errorMsg.textContent = 'Format email tidak valid';
-                errorMsg.style.display = 'block';
-                return;
-            }
-            // Siapkan pesan untuk WhatsApp
-            const adminNumber = '6285891131508'; // format internasional tanpa "0" depan: 085891 → 6285176834002
-            let whatsappText = `Halo Fiz Audio,\nSaya ingin menghubungi Anda lewat form kontak.\n\n`;
-            whatsappText += `Nama: ${name}\n`;
-            whatsappText += `Email: ${email}\n`;
-            whatsappText += `Nomor WA: ${phone}\n`;
-            whatsappText += `Pesan: ${message}\n`;
-
-            const encoded = encodeURIComponent(whatsappText);
-            const url = `https://wa.me/${adminNumber}?text=${encoded}`;
-            // buka WhatsApp
-            window.open(url, '_blank');
-
-            // bersihkan form (opsional)
-            document.getElementById('contact-form').reset();
-            errorMsg.style.display = 'none';
-        });
-
-        function validateEmail(email) {
-            // regex sederhana
-            const re = /\S+@\S+\.\S+/;
-            return re.test(email);
-        }
-
+        button = document.getElementById("whatsapp-sekarang");
+        button.onclick = function() {
+            window.location.href = "https://wa.me/6285891131508";
+        };
 
         // navbar toggle
         const navbarToggle = document.querySelector(".navbar-toggle");
