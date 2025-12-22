@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 body {
     margin: 0;
     padding: 0;
@@ -8,66 +9,155 @@ body {
     color: #333;
 }
 
-.container {
-    max-width: 500px;
-    margin: 80px auto;
-    background: #fff;
-    padding: 30px 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+/* background */
+
+.background-dalam {
+    background: url(https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/76/2023/08/22/5-1-664003696.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 200px;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.95rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-.btn-submit {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    background: #25d366;
-    /* WhatsApp-green */
+.background-dalam h2 {
     color: white;
-    border: none;
-    border-radius: 5px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+}
+
+.background-dalam h5 {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .background-dalam {
+        padding: 100px;
+    }
+    .background-dalam h2 {
+        font-size: 32px;
+    }
+    .background-dalam h5 {
+        font-size: 18px;
+    }
+}
+
+
+/* kontak */
+
+.kontak-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kontak-container .whatsapp {
+    display: grid;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    /* border: 2px solid #25d366; */
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.whatsapp i {
+    text-align: center;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.whatsapp h3 {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.whatsapp button {
+    background: none;
+    border: 5px solid #25d366;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: inherit;
+    font: inherit;
     cursor: pointer;
+    outline: inherit;
 }
 
-.btn-submit:hover {
-    background: #1ebe5d;
+.kontak-container .whatsapp:hover {
+    background-color: #25d366;
+    color: #fff;
 }
 
-.error {
-    color: red;
-    font-size: 0.9rem;
+@media (max-width: 480px) {
+    .kontak-container {
+        flex-direction: column;
+    }
+    .kontak-container .whatsapp {
+        font-size: 20px;
+        padding: 8px 16px;
+        margin: 10px;
+    }
+    .whatsapp i {
+        font-size: 40px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .whatsapp h3 {
+        font-size: 18px;
+    }
+    .whatsapp button {
+        padding: 8px 16px;
+        border-width: 4px;
+    }
+}
+
+
+/* office */
+
+.office {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.office i {
+    font-size: 40px;
+    color: #4e54c8;
     margin-bottom: 10px;
-    display: none;
+}
+
+.office h4 {
+    margin: 10px 0 5px 0;
+    font-size: 22px;
+    color: #000;
+}
+
+.office p {
+    margin: 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .office i {
+        font-size: 30px;
+    }
+    .office h4 {
+        font-size: 20px;
+    }
+    .office p {
+        font-size: 16px;
+    }
 }
 
 
