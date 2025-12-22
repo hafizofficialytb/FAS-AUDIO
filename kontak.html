@@ -11,18 +11,21 @@
 <body>
 
     <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
                     alt="Fiz Audio Logo" /></a>
-        </div>
-        <div class="navbar-menu">
-            <a href="jasa.html">Jasa</a>
-            <a href="sewa-sounds-system.html">Sewa Sound System</a>
-            <a href="gallry.html">Gallery</a>
-            <!-- <a href="price-list.html">Price List</a> -->
-            <a href="kontak.html">Kontak</a>
-
-            <!-- <button class="logout" id="btn-logout">Logout</button> -->
+            <button class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="jasa.html">Jasa</a></li>
+                <li><a href="sewa-sounds-system.html">Sewa Sound System</a></li>
+                <li><a href="gallry.html">Gallery</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -95,22 +98,15 @@
             return re.test(email);
         }
 
-        //   logout
-        // document.addEventListener("DOMContentLoaded", () => {
-        //     const username = localStorage.getItem("fiz_currentUser");
-        //     if (!username) {
-        //         // jika belum login, kembali ke index.html
-        //         window.location.href = "index.html";
-        //         return;
-        //     }
-        //     document.getElementById("user-name").textContent = username;
-        // });
 
-        // document.getElementById("btn-logout").addEventListener("click", () => {
-        //     localStorage.removeItem("fiz_currentUser");
-        //     // bisa juga remove user data jika mau
-        //     window.location.href = "index.html";
-        // });
+        // navbar toggle
+        const navbarToggle = document.querySelector(".navbar-toggle");
+        const navbarMenu = document.querySelector(".navbar-menu");
+
+        navbarToggle.addEventListener("click", () => {
+            navbarToggle.classList.toggle("active");
+            navbarMenu.classList.toggle("active");
+        });
     </script>
 
 </body>
