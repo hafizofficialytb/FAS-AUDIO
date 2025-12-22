@@ -12,7 +12,7 @@
 
     <nav class="navbar">
         <div class="navbar-logo">
-            <a href="home.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
+            <a href="index.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZLmSR79eMbnJjzLshNH2Rgo15LmWMbGZsEaiyDPbs7AV9HRihKfBnrJw-LCQ_l1Pr-mvL3oaSdMbKbny-csc5oXQh6jh-Fe9ZnJ6-uhPZUWStlMunSlv9nhfIz4grWa6dANhz2ErQFQ7MBdRo6K0lL5ZUBNUhFv7LTL59_v5r6EekS0DwnabO4tWf_0U/s16000/LOGO%20FAS.png"
                     alt="Fiz Audio Logo" /></a>
         </div>
         <div class="navbar-menu">
@@ -22,7 +22,7 @@
             <!-- <a href="price-list.html">Price List</a> -->
             <a href="kontak.html">Kontak</a>
 
-            <button class="logout" id="btn-logout">Logout</button>
+            <!-- <button class="logout" id="btn-logout">Logout</button> -->
         </div>
     </nav>
 
@@ -72,7 +72,7 @@
                 return;
             }
             // Siapkan pesan untuk WhatsApp
-            const adminNumber = '6285176834002'; // format internasional tanpa "0" depan: 085176834002 → 6285176834002
+            const adminNumber = '628589131508'; // format internasional tanpa "0" depan: 08589131508 → 6285176834002
             let whatsappText = `Halo Fiz Audio,\nSaya ingin menghubungi Anda lewat form kontak.\n\n`;
             whatsappText += `Nama: ${name}\n`;
             whatsappText += `Email: ${email}\n`;
@@ -96,21 +96,21 @@
         }
 
         //   logout
-        document.addEventListener("DOMContentLoaded", () => {
-            const username = localStorage.getItem("fiz_currentUser");
-            if (!username) {
-                // jika belum login, kembali ke index.html
-                window.location.href = "index.html";
-                return;
-            }
-            document.getElementById("user-name").textContent = username;
-        });
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const username = localStorage.getItem("fiz_currentUser");
+        //     if (!username) {
+        //         // jika belum login, kembali ke index.html
+        //         window.location.href = "index.html";
+        //         return;
+        //     }
+        //     document.getElementById("user-name").textContent = username;
+        // });
 
-        document.getElementById("btn-logout").addEventListener("click", () => {
-            localStorage.removeItem("fiz_currentUser");
-            // bisa juga remove user data jika mau
-            window.location.href = "index.html";
-        });
+        // document.getElementById("btn-logout").addEventListener("click", () => {
+        //     localStorage.removeItem("fiz_currentUser");
+        //     // bisa juga remove user data jika mau
+        //     window.location.href = "index.html";
+        // });
     </script>
 
 </body>
