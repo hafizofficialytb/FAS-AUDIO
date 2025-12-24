@@ -10,7 +10,8 @@ body {
     min-height: 100vh;
 }
 
-.container {
+
+/* .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -135,7 +136,7 @@ h1 {
     }
 }
 
-
+*/
 /* Navbar styles */
 
 .navbar {
@@ -295,3 +296,43 @@ footer p {
     margin: auto;
     padding: 20px 0;
 }
+
+
+/* image */
+
+.container-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    animation: animate 12s infinite ease-in-out;
+}
+
+.container-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+}
+
+@keyframes animate {
+    0% {
+        background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieC59VDzHRzE7E3yEGP1QEObmDCB8CCyzP1z-INwyv7oHkTnPEdbUdX5fxtmgUvXe2dioFr9FUnMtqH9GAyhgpVkR6W1HLjpX0aSMuXvMVjpGlyNMf5sJO8T2a5IZYFqYjIANcR83cRrlxLIdRR4PIzFgEy11jAJeJR26mvkAWdOQI_DeWWFD48F6yoZg/s16000/Gambar%20WhatsApp%202025-09-13%20pukul%2005.56.01_449ee43b.jpg);
+    }
+    25% {
+        background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggwuEpiQkgrNNyV8kPIscbzMDVSokHxRVnbFngBhvHOLNdRzcPqGTvWU35Mi2YTVEBthO56L14E1no9mpBpYibK8TnTa_baAXyeqnoXmG_dltKGkY-JE5atBOjyPhm4F6oldeaxOojI9TQGROxWgrScw5FFgH3iGdR7rniA0Eo8FQ9i5QsQ-qJjgnIF0s/s16000/IMG_20251118_064738.jpg);
+    }
+    50% {
+        background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieC59VDzHRzE7E3yEGP1QEObmDCB8CCyzP1z-INwyv7oHkTnPEdbUdX5fxtmgUvXe2dioFr9FUnMtqH9GAyhgpVkR6W1HLjpX0aSMuXvMVjpGlyNMf5sJO8T2a5IZYFqYjIANcR83cRrlxLIdRR4PIzFgEy11jAJeJR26mvkAWdOQI_DeWWFD48F6yoZg/s16000/Gambar%20WhatsApp%202025-09-13%20pukul%2005.56.01_449ee43b.jpg);
+    }
+    75% {
+        background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggwuEpiQkgrNNyV8kPIscbzMDVSokHxRVnbFngBhvHOLNdRzcPqGTvWU35Mi2YTVEBthO56L14E1no9mpBpYibK8TnTa_baAXyeqnoXmG_dltKGkY-JE5atBOjyPhm4F6oldeaxOojI9TQGROxWgrScw5FFgH3iGdR7rniA0Eo8FQ9i5QsQ-qJjgnIF0s/s16000/IMG_20251118_064738.jpg);
+    }
+    100% {
+        background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieC59VDzHRzE7E3yEGP1QEObmDCB8CCyzP1z-INwyv7oHkTnPEdbUdX5fxtmgUvXe2dioFr9FUnMtqH9GAyhgpVkR6W1HLjpX0aSMuXvMVjpGlyNMf5sJO8T2a5IZYFqYjIANcR83cRrlxLIdRR4PIzFgEy11jAJeJR26mvkAWdOQI_DeWWFD48F6yoZg/s16000/Gambar%20WhatsApp%202025-09-13%20pukul%2005.56.01_449ee43b.jpg);
+    }
+}
+
+
+/* End of CSS */
